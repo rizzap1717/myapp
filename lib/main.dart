@@ -1,40 +1,31 @@
-
 import 'package:flutter/material.dart';
 import 'package:myapp/container_widget.dart';
+import 'package:myapp/news_container.dart';
+import 'package:myapp/row_column/column_widget.dart';
+import 'package:myapp/row_column/latihan_rowcolumn.dart';
+import 'package:myapp/row_column/row_widget.dart';
+import 'package:myapp/row_column/latihan.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var belajarRow = BelajarRow;
     return MaterialApp(
-      title: 'Belajar Flutter',
       home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 68, 215, 255),
+        backgroundColor: Colors.black,
         appBar: AppBar(
-          title: const Text('Belajar Flutter'),
+          title: const Text('Flutter'),
           centerTitle: true,
-          backgroundColor: Colors.pinkAccent,
+          backgroundColor: Colors.greenAccent,
         ),
-        body:  NewsContainer(),
+        body: TugasSimpel(),
       ),
-    );
-  }
-}
-
-class BelajarText extends StatelessWidget {
-  const BelajarText({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('Hello World'),
     );
   }
 }
